@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Floods Prediction</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50; /* Green color for submit button */
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049; /* Darker green color on hover */
+    }
+
+    .result-container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .result-container h2 {
+      color: #333;
+    }
+
+    .result-container p {
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Floods Predictor</h1>
+  <h2>Enter values</h2>
+  <form method="POST" action="/">
+    Cloud Cover(%): <input type="number" step="0.01" name="cloudCover"><br><br>
+    Annual Rainfall(mm): <input type="number" step="0.01" name="annualRainfall"><br><br>
+    Jan-Feb Rainfall(mm): <input type="number" step="0.01" name="janFebRainfall"><br><br>
+    March-May Rainfall(mm): <input type="number" step="0.01" name="marchMayRainfall"><br><br>
+    June-Sept Rainfall(mm): <input type="number" step="0.01" name="juneSeptRainfall"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+    {% if result %}
+        <div class="result-container">
+            <h2>Result:</h2>
+            <p>{{ result }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
