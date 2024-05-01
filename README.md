@@ -33,7 +33,6 @@ The program may require the following dependencies:
 - Scikit-learn
 - Pandas
 - NumPy
-- Matplotlib (for visualization)
 
 ## Contributing
 
